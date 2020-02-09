@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Menu extends Migration
+class Subscriber extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class Menu extends Migration
      */
     public function up()
     {
-        //menu
-        Schema::create('menu', function (Blueprint $table) {
-            $table->bigIncrements('id')->unique();
-            $table->string('title');
-            $table->string('description');
-            $table->string('photo');
+        //subscriber
+        Schema::create('subscriber', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

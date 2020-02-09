@@ -21,7 +21,11 @@ $api->version('v1', function($api){
     });
     $api->POST('/register', 'App\Http\Controllers\AuthController@register');
     $api->POST('/login', 'App\Http\Controllers\AuthController@login');
-    $api->POST('/pppp', 'App\Http\Controllers\AuthController@register');
+    //subscriber
+    Route::POST('/subscriber/create', 'subscriberController@createsubscriber');
+    Route::GET('/subscriber/show','subscriberController@showallsubscriber');
+    
+    //menu
     Route::post('/menu/create', 'menuController@createmenu');
     Route::get('/menu/all', 'menuController@showallmenu');
     Route::get('/menu/{id}', 'menuController@showdetailmenu');
