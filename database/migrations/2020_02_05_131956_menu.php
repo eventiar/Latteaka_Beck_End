@@ -17,7 +17,7 @@ class Menu extends Migration
         Schema::create('menu', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('photo');
             $table->timestamps();
         });
