@@ -18,7 +18,7 @@ class Menu extends Migration
             $table->bigIncrements('id')->unique();
             $table->string('title');
             $table->text('description');
-            $table->textmedium('photo');
+            $table->mediumtext('photo');
             $table->timestamps();
         });
     }
